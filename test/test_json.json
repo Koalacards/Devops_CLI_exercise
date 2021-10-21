@@ -1,0 +1,14 @@
+[
+    {
+        "username": "testuser",
+        "firstname": "Bob",
+        "lastname": "Test",
+        "department": "QA"
+    },
+    {
+        "username": "hdeangelis",
+        "firstname": "Hayden",
+        "lastname": "DeAngelis",
+        "department": "SRE" 
+    }
+]
