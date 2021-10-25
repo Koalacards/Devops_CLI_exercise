@@ -1,1 +1,16 @@
-version: 3.4
+version: "3.7"
+services:
+  cli:
+    build:
+      context: .
+    entrypoint: /bin/bash
+    command: -c "python3 main.py"
+    volumes:
+      - .:/app
+  test:
+    build:
+      context: .
+    entrypoint: /bin/bash
+    command: -c "pytest -rA test/test_cli.py"
+    volumes:
+      - .:/app

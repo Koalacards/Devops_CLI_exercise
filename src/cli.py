@@ -3,6 +3,7 @@ import json
 class CLIObject:
     def __init__(self, json_path:str):
         self.employee_record = self._get_json(json_path)
+        print("Employee record successfully uploaded.")
 
     def _get_json(self, json_path:str):
         """Gets the JSON file as described by the json path.
@@ -54,9 +55,8 @@ class CLIObject:
                 firstname = str(employee.get("firstname", None))
                 lastname = str(employee.get("lastname", None))
                 department = str(employee.get("department", None))
-                return_string = f"Employee information for username {username}: \n \
-                First name: {firstname} \n \
-                Last name: {lastname} \n \
-                Department: {department}" 
+                return_string = f"Employee information for username {username}: \n First name: {firstname} \n Last name: {lastname} \n Department: {department}" 
                 return return_string
+        
+        return f"An employee with username {username} could not be found. Please use ls to recieve the list of employee usernames."
         
